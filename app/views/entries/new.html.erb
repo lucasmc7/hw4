@@ -1,22 +1,26 @@
-<h1>New Entry</h1>
+<div class="container mt-5">
+  <h1 class="mb-4">New Entry</h1>
 
-<form action="/entries" method="post">
-  <input type="hidden" name="place_id" value="<%= params["place_id"] %>">
+  <form action="/entries" method="post">
+    <input type="hidden" name="place_id" value="<%= params["place_id"] %>">
 
-  <p>
-    <label for="title_input">Title</label>
-    <input type="text" name="title" id="title_input">
-  </p>
+    <div class="form-group">
+      <label for="title_input">Title</label>
+      <input type="text" class="form-control" name="title" id="title_input" placeholder="Enter title">
+    </div>
 
-  <p>
-    <label for="description_input">Description</label>
-    <input type="text" name="description" id="description_input">
-  </p>
+    <div class="form-group">
+      <label for="description_input">Description</label>
+      <input type="text" class="form-control" name="description" id="description_input" placeholder="Enter description">
+    </div>
 
-  <p>
-    <label for="occurred_on_input">Occurred On</label>
-    <input type="date" name="occurred_on" id="occurred_on_input">
-  </p>
+    <div class="form-group">
+      <label for="occurred_on_input">Occurred On</label>
+      <input type="date" class="form-control" name="occurred_on" id="occurred_on_input">
+    </div>
+    
+    <br/>
 
-  <button>Save</button>
-</form>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>

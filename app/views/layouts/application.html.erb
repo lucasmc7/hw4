@@ -13,9 +13,11 @@
 
   <body>
   <%= render 'layouts/header'%>
-    <div>
+  <% if flash["notice"].present? %>
+    <div class="alert alert-success py-2 mb-0" role="alert">
       <%= flash["notice"] %>
     </div>
+  <% end %>
     
 
     <%= yield %>
